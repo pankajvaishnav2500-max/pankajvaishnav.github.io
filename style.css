@@ -1,0 +1,134 @@
+:root {
+  --bg: #020617;
+  --card: #020617;
+  --text: #e5e7eb;
+  --accent: #38bdf8;
+}
+
+.light {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #020617;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* TOGGLE */
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  color: #020617;
+  font-size: 1rem;
+
+  cursor: pointer;
+  pointer-events: auto;     /* ✅ IMPORTANT */
+  z-index: 9999;            /* ✅ VERY IMPORTANT */
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* CARD */
+.card {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 30px;
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(56,189,248,0.1);
+}
+
+/* SKILLS */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.skills div {
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(56,189,248,0.05);
+  transition: 0.3s;
+}
+
+.skills div:hover {
+  transform: translateY(-6px);
+  background: var(--accent);
+  color: #020617;
+}
+
+.skills i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(56,189,248,0.05);
+}
+
+.project-card a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* CONTACT */
+.contact a {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.7;
+}
+.toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+}
+
+.toggle:active {
+  transform: scale(0.95);
+}
